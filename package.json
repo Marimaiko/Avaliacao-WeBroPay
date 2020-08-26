@@ -1,11 +1,11 @@
 {
-  "name": "teste-processoseletivo-wbp",
+  "name": "webro-pay-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon inde.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "sequelize": "^6.3.4"
   },
   "devDependencies": {
+    "jest": "^26.4.2",
     "nodemon": "^2.0.4"
   }
 }

@@ -5,20 +5,20 @@ POST http://localhost:3000/createContract HTTP/1.1
 content-type: application/json
 
 {
-    "id": "01",
-    "description": "Contrato para teste",
+    "description": "Contrato para último teste",
     "status": "false"
 }
 
 
 ###
-PUT http://localhost:3000/updateUser/5f4079b6a5edbf3714769e89 HTTP/1.1
+PUT http://localhost:3000/updateContract/142 HTTP/1.1
 content-type: application/json
 
 {
-    "id": "321"
+    "description": "Contrato modificado com sucesso"
 }
 
 
 ###
-DELETE http://localhost:3000/deleteUser/5f4079b6a5edbf3714769e89
+DELETE http://localhost:3000/deleteContract/142
+

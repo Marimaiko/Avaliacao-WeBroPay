@@ -16,4 +16,14 @@ routes.post('/createContract', (req,res) => controller.createContract(req.body)
     .catch(error => console.error(error))
 );
 
+routes.put('/updateContract/id', (req, res) => controller.updateContract(req.params, req.body)
+    .then(result => res.send(result))
+    .catch(error => console.error(error))
+);
+
+routes.delete('/deleteContract/id', (req, res) => controller.deleteContract(req.params)
+    .then(result => res.send(result))
+    .catch(error => console.error(error))
+);
+
 module.exports = routes;

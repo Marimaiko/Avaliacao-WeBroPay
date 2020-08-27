@@ -19,7 +19,6 @@ const createContractSchema = async (database) => {
     if (contractSchema) {
         return;
     }
-
     contractSchema = database.define('contract', {
         id: {
             type: Number,
@@ -46,52 +45,58 @@ const getContract = async () => {
 };
 
 const createContract = async ({
-    id, description, status
+    description, status
 }) => {
     const database = await connectDatabase();
 
     await createContractSchema(database);
 
     const {
-        contract
+        contract: Contract
     } = database.models;
-
-     contract = new Contract({
-        id,
+    const newContract = new Contract({
         description,
         status
     });
-
-    contract.save();
+    return newContract.save();
 };
 
-// const jane = await User.create({ name: "Jane" });
-// // Jane exists in the database now!
-// console.log(jane instanceof User); // true
-// console.log(jane.name); // "Jane"
 
-// const updateContract = async ({
-//     id
-// }, {
-//     name
-// }) => {
-//     const database = await connectDatabase();
+const updateContract = async ({
+    id
+}, {description}) => {
+    const database = await connectDatabase();
 
-//     await createUserSchema(database);
+    await createContractSchema(database);
 
-//     const {
-//         User
-//     } = database.models;
+    const {
+        contract: Contract
+    } = database.models;
 
-//     return User.update({
-//         _id: id
-//     }, {
-//         name
-//     });
-// };
+    return Contract.update(
+        { _id: id}, {
+    description
+    });
+};
+
+const deleteContract = async ({
+    id
+}) => {
+    const database = await connectDatabase();
+
+    await createContractSchema(database);
+
+    const Contract = database.models;
+
+    return Contract.deleteOne({
+        _id: id
+    });
+};
 
 
 module.exports = {
     getContract,
-    createContract
+    createContract,
+    updateContract,
+    deleteContract
 }

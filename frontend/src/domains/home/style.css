@@ -1,0 +1,31 @@
+.divisor
+{
+top: 133px;
+left: 0px;
+max-width: 1920px;
+height: 8px;
+background: #122659 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.title{
+top: 204px;
+left: 96px;
+width: 176px;
+height: 37px;
+text-align: left;
+font-family: 'Roboto', sans-serif;letter-spacing: 0px;
+color: #122659;
+text-shadow: 0px 3px 6px #00000029;
+text-transform: uppercase;
+opacity: 1;
+}
+
+button{
+color:#FFFFFF;
+background: #122659 0% 0% no-repeat padding-box;
+box-shadow: 0px 1px 3px #00000033;
+opacity: 1;
+width: 142px;
+height: 43px;
+}

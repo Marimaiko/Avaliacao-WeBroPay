@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação-WeBroPay</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="head">
+        <img src='../../public/logowebropay.png' width="151" height="64">
+        <div class='divisor'></div>
+    </div>
+
+    <div class='main'>
+       <div class='title'>
+           <h2>CONTRATOS</h2>
+           <div class="botao">
+            <button class="button" onclick="createContract()">Adicionar contrato</button>
+           </div>
+           <div classe= 'table'>
+            <table border='1'>
+                <tr>
+                    <th>Contrato</th>
+                    <th>Descrição</th>
+                    <th>Status</th>
+                    <!-- <th>Editar</th> -->
+                </tr>
+                <tr>
+                    <td id='id'>##</td>
+                    <td id='description'>#</td>
+                    <td id='status'>#</td>
+                </tr>
+
+            </table>
+           </div>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>

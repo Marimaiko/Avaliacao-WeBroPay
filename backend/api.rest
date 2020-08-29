@@ -1,0 +1,22 @@
+GET http://localhost:3000/getContract
+
+###
+POST http://localhost:3000/createContract HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Contrato para teste",
+    "status": "false"
+}
+
+###
+PUT http://localhost:3000/updateContract/142 HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Contrato modificado com sucesso"
+}
+
+###
+DELETE http://localhost:3000/deleteContract/id:142
+
